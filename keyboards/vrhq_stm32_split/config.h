@@ -63,8 +63,6 @@
 /* RGB Backlight */
 #define RGB_DI_PIN A1
 #define RGBLED_NUM 38
-#define RGBLIGHT_ANIMATIONS
 #define RGBLIGHT_LIMIT_VAL 30
-// #define RGBLIGHT_LIMIT_VAL 153
 #define RGBLIGHT_SLEEP
 #define RGBLIGHT_SPLIT

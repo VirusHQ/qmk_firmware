@@ -1,6 +1,6 @@
 #include <hal.h>
 #include "usb_main.h"
-#include "phoenix.h"
+#include "vrhq_stm32_split.h"
 
 void bootmagic_lite(void) {
     matrix_scan();
@@ -71,15 +71,4 @@ void manipulate_led(uint32_t led, bool on) {
     case 3:
         on ? led3_on() : led3_off();
     }
-}
-
-
-layer_state_t layer_state_set_kb(uint32_t state) {
-    state = layer_state_set_user(state);
-
-    uint8_t layer = get_highest_layer(state);
-    manipulate_led(1, layer  & 1);
-    manipulate_led(2, layer >> 1 & 1);
-    manipulate_led(3, layer >> 2 & 1);
-    return state;
 }
